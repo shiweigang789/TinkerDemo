@@ -4,6 +4,8 @@
 
 热修复框架Tinker最完整讲解（02）——加入Walle多渠道打包:http://m.blog.csdn.net/Alpha58/article/details/74906630
 
+Walle（瓦力）多渠道打包（含加固）:http://blog.csdn.net/blf09/article/details/72782795
+
 Gradle插件使用方式
 配置build.gradle
 

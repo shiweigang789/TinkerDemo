@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.meituan.android.walle.WalleChannelReader;
 import com.swg.tinkerdemo.tinker.Utils;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
 
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void show(View view){
-        Toast.makeText(this, "show_tinker", Toast.LENGTH_SHORT).show();
+        String channel = WalleChannelReader.getChannel(this.getApplicationContext());
+        Toast.makeText(this, "show_tinker" + channel, Toast.LENGTH_SHORT).show();
     }
 
     //Tinker相关配置

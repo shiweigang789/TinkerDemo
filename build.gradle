@@ -17,6 +17,9 @@ buildscript {
 //        classpath ('com.tencent.tinker:tinker-patch-gradle-plugin:1.7.5')
 //        // tinkersupport插件
 //        classpath "com.tencent.bugly:tinker-support:latest.release"
+        // Walle
+        classpath 'com.meituan.android.walle:plugin:1.1.4'
+
     }
 }
 

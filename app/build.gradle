@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'walle'
+
 
 android {
     compileSdkVersion 26
@@ -81,6 +83,19 @@ dependencies {
     //用于生成application类
     provided("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
 
+    // Walle
+    compile 'com.meituan.android.walle:library:1.1.4'
+
+}
+
+// Walle
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+    // 定制渠道包的APK的文件名称
+    apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+    // 渠道配置文件
+    channelFile = new File("${project.getProjectDir()}/channel")
 }
 
 //Tinker相关配置start======================================
